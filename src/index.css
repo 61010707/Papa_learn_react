@@ -1,0 +1,13 @@
+.navBar {
+  background-color: salmon;
+  height: 100px;
+  margin-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+}
+body {
+  margin: 0px;
+}
