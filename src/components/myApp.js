@@ -1,27 +1,16 @@
 import React from "react";
 class MyApp extends React.Component {
-  Greeting() {
-    const date = new Date();
-    const hours = date.getHours();
-    let timeOfDay;
-    if (hours < 12) {
-      timeOfDay = "morning";
-    } else if (hours >= 12 && hours < 17) {
-      timeOfDay = "afternoon";
-    } else {
-      timeOfDay = "night";
-    }
-    return <h1>Good {timeOfDay} to you,sir or madam!</h1>;
+  constructor(props) {
+    super(props);
+    this.state = {
+      answer: "yes"
+    };
   }
 
-  Header(props) {
-    return <header>Welcome, {props.username}</header>;
-  }
   render() {
     return (
       <div>
-        <this.Header username="DrZIn" />
-        <this.Greeting />
+        <h1>Is state import to known? {this.state.answer}</h1>
       </div>
     );
   }
