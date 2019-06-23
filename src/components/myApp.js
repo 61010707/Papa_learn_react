@@ -1,14 +1,14 @@
 import React from "react";
-import Footer from "./footer";
-import NavBar from "./navBar";
-import MainContent from "./mainContent";
 
 function MyApp() {
   return (
     <div>
-      <NavBar />
-      <MainContent />
-      <Footer />
+      <input type="checkbox" />
+      <p>to do </p>
+      <input type="checkbox" />
+      <p>to do </p>
+      <input type="checkbox" />
+      <p>to do </p>
     </div>
   );
 }
