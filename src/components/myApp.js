@@ -1,16 +1,17 @@
 import React from "react";
+
 class MyApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      answer: "yes"
+      isLoggedIN: false
     };
   }
 
   render() {
     return (
       <div>
-        <h1>Is state import to known? {this.state.answer}</h1>
+        <h1>your are current logged {this.state.isLoggedIN ? "in" : "out"}</h1>
       </div>
     );
   }
