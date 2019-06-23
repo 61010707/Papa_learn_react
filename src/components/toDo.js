@@ -1,9 +1,9 @@
 import React from "react";
 
-const ToDo = () => (
+const ToDo = props => (
   <div className="todo-items">
-    <input type="checkbox" />
-    <p>Text here</p>
+    <input type="checkbox" checked={props.data.completed}/>
+    <p>{props.data.text}</p>
   </div>
 );
 export default ToDo;
