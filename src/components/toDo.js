@@ -12,7 +12,13 @@ class ToDo extends React.Component {
   render() {
     return (
       <div className="todo-items">
-        <input type="checkbox" checked={this.state.completed} />
+        <input
+          type="checkbox"
+          checked={this.state.completed}
+          onChange={() => {
+            console.log("click me !");
+          }}
+        />
         <p>{this.state.text}</p>
       </div>
     );
