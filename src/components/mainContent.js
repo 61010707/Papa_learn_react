@@ -1,8 +1,9 @@
 import React from "react";
-
+const firstname = "Pasawee";
+const lastname = "laearun";
 const MainContent = () => (
   <main>
-    <h1>DrZin</h1>
+    <h1>DrZin : {`${firstname} ${lastname}`}</h1>
     <p>This is react sessions from freecode camp</p>
     <ul>
       <li>home</li>
