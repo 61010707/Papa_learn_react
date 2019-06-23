@@ -20,9 +20,26 @@ body {
   border-bottom: 100px;
   border-color: aqua;
 }
-.joke-list {
+.product-list {
+  background-color: white;
+  width: 400px;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  margin: auto;
+}
+.pro-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  border-bottom: 1px solid tomato;
+  font-family: 'Roboto',sans-serif;
 }
