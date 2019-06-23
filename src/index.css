@@ -9,5 +9,20 @@
   font-size: 30px;
 }
 body {
-  margin: 0px;
+  margin: 10px;
+  background-color: whitesmoke;
+}
+
+.joke-items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 100px;
+  border-color: aqua;
+}
+.joke-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
