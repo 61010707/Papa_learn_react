@@ -1,12 +1,15 @@
 import React from "react";
 import Joke from "./joke";
-const MyApp = () => (
-  <div className="joke-list">
-    <Joke question="Haha" answer="wtf" />
-    <Joke question="" answer="wtf" />
-    <Joke question="Haha" answer="wtf" />
-    <Joke question="Haha" answer="wtf" />
-    <Joke question="Haha" answer="wtf" />
-  </div>
-);
+import jokesData from "./jokeData";
+const MyApp = () => {
+  const jokeComponets = jokesData.map(jokedata => (
+    <Joke
+      // key most important
+      key={jokedata.id}
+      question={jokedata.question}
+      answer={jokedata.punchLine}
+    />
+  ));
+  return <div className="joke-list">{jokeComponets}</div>;
+};
 export default MyApp;
