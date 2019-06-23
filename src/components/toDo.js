@@ -1,7 +1,11 @@
 import React from "react";
 
 const ToDo = props => {
-  console.log(props)
+  const completedStyle = {
+    fontStyle: "italic",
+    color: "#cdcdcd",
+    textDecoration: "line-through"
+  };
   return (
     <div className="todo-items">
       <input
@@ -9,10 +13,9 @@ const ToDo = props => {
         checked={props.datas.completed}
         onChange={() => props.handleChange(props.datas.id)}
       />
-      <p>{props.datas.text}</p>
+      <p style={props.datas.completed ? completedStyle:null}>{props.datas.text}</p>
     </div>
   );
 };
-
 
 export default ToDo;
