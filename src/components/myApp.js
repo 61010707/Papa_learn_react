@@ -5,9 +5,7 @@ function MyApp() {
   const ToDoComponents = ToDoData.map(data => (
     <ToDo key={data.id} data={data} />
   ));
-  return <div className="todo-lists" >
-    {ToDoComponents}
-  </div>;
+  return <div className="todo-lists">{ToDoComponents}</div>;
 }
 
 export default MyApp;
