@@ -1,15 +1,14 @@
 import React from "react";
+import Footer from "./footer";
+import NavBar from "./navBar";
+import MainContent from "./mainContent";
 function MyApp() {
   return (
-    <ul>
-      <h1>DrZin</h1>
-      <p>This is react sessions from freecode camp</p>
-      <ul>
-        <li>home</li>
-        <li>Lab</li>
-        <li>My bed</li>
-      </ul>
-    </ul>
+    <div>
+      <NavBar />
+      <MainContent />
+      <Footer />
+    </div>
   );
 }
 
