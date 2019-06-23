@@ -1,14 +1,12 @@
 import React from "react";
-
+import ToDo from "./toDo";
 function MyApp() {
   return (
-    <div>
-      <input type="checkbox" />
-      <p>to do </p>
-      <input type="checkbox" />
-      <p>to do </p>
-      <input type="checkbox" />
-      <p>to do </p>
+    <div className="todo-lists">
+      <ToDo />
+      <ToDo />
+      <ToDo />
+      <ToDo />
     </div>
   );
 }

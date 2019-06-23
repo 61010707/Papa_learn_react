@@ -1,9 +1,9 @@
-import react from "react";
+import React from "react";
 
 const ToDo = () => (
-    <div>
-        <input type = "checkbox"></input>
-        <p>todo</p>
-    </div>
-)
+  <div className="todo-items">
+    <input type="checkbox" />
+    <p>Text here</p>
+  </div>
+);
 export default ToDo;
