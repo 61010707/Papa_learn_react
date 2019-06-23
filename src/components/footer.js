@@ -11,9 +11,10 @@ const calTime = in_hours => {
     return "night";
   }
 };
+
 const Footer = () => (
   <footer>
-    <h3>this is my footer Good {calTime(hours)} </h3>
+    <h3> this is my footer Good {calTime(hours)} </h3>{" "}
   </footer>
 );
 export default Footer;
