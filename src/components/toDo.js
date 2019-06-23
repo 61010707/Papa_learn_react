@@ -13,7 +13,9 @@ const ToDo = props => {
         checked={props.datas.completed}
         onChange={() => props.handleChange(props.datas.id)}
       />
-      <p style={props.datas.completed ? completedStyle:null}>{props.datas.text}</p>
+      <p style={props.datas.completed ? completedStyle : null}>
+        {props.datas.text}
+      </p>
     </div>
   );
 };
