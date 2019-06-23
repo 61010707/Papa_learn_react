@@ -1,31 +1,22 @@
 import React, { Component } from "react";
-import Conditional from "./conditional";
-class MyApp extends Component {
+
+class myApp extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoading: true
-    };
+    this.state = { unreadMassage: ["hey nai", "hey javaF"] };
   }
-
-  componentDidMount() {
-    setTimeout(() => {
-      console.log("componet did mount ");
-      this.setState({
-        isLoading: false
-      });
-    }, 1500);
-  }
-  
   render() {
-    console.log(this.state.isLoading);
+
     return (
       <div>
-        Code goes here = {this.state.isLoading ? "true" : "false"}
-        <Conditional isLoading={this.state.isLoading} />
+        {this.state.unreadMassage.length > 0 ? (
+          <h1>have unread {this.state.unreadMassage.length} massage</h1>
+        ) : (
+          <h1>dont have </h1>
+        )}
       </div>
     );
   }
 }
 
-export default MyApp;
+export default myApp;
