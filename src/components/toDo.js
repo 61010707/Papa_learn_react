@@ -1,6 +1,7 @@
 import React from "react";
 
 const ToDo = props => {
+  console.log(props)
   return (
     <div className="todo-items">
       <input
@@ -12,4 +13,6 @@ const ToDo = props => {
     </div>
   );
 };
+
+
 export default ToDo;
