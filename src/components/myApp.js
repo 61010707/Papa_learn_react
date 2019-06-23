@@ -1,17 +1,29 @@
 import React from "react";
-import ProductsData from "./vschoolProducts";
-import ProductList from "./productList";
-
 class MyApp extends React.Component {
-  myMethod() {
-    const productComponent = ProductsData.map(data => (
-      <ProductList key={data.id} product={data} />
-    ));
-    return productComponent;
+  Greeting() {
+    const date = new Date();
+    const hours = date.getHours();
+    let timeOfDay;
+    if (hours < 12) {
+      timeOfDay = "morning";
+    } else if (hours >= 12 && hours < 17) {
+      timeOfDay = "afternoon";
+    } else {
+      timeOfDay = "night";
+    }
+    return <h1>Good {timeOfDay} to you,sir or madam!</h1>;
+  }
+
+  Header(props) {
+    return <header>Welcome, {props.username}</header>;
   }
   render() {
-    const incomponent = this.myMethod();
-    return <div className="product-list">{incomponent} </div>;
+    return (
+      <div>
+        <this.Header username="DrZIn" />
+        <this.Greeting />
+      </div>
+    );
   }
 }
 export default MyApp;
