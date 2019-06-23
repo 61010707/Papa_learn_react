@@ -1,4 +1,5 @@
 import React from "react";
+import { white } from "ansi-colors";
 const date = new Date();
 const hours = date.getHours();
 const footerStyle = {
@@ -8,8 +9,9 @@ const footerStyle = {
 };
 const calTime = in_hours => {
   if (in_hours < 12) {
+    footerStyle.color="blue";
     return "morning";
-  } else if (hours >= 12 && hours < 17) {
+  } else if (hours >= 12 && hours < 17) { 
     return "afternoon";
   } else {
     return "night";
