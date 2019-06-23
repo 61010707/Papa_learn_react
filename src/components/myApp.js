@@ -1,39 +1,30 @@
 import React, { Component } from "react";
-
+import Conditional from "./conditional";
 class MyApp extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isLoading: true
+    };
   }
 
-  
   componentDidMount() {
-    //Get the data I need to correctly display
+    setTimeout(() => {
+      console.log("componet did mount ");
+      this.setState({
+        isLoading: false
+      });
+    }, 1500);
   }
-
-  componentWillReceiveProps(nextProps) {
-    // receive props from parent
-    if (nextProps.whateever !== this.props.whateever) {
-      // do some thing
-    }
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    // return true if want it to update
-    // return false if not
-  }
-
-  componentWillUnmount() {
-    //unmount from screen 
-    // remove or clenup your code your components 
-    //(E.g remove events )
-  }
-  getSnapshotBeforeUpdate()
-  {
-    //create a backup of current way 
-  }
+  
   render() {
-    return <div>Code goes here</div>;
+    console.log(this.state.isLoading);
+    return (
+      <div>
+        Code goes here = {this.state.isLoading ? "true" : "false"}
+        <Conditional isLoading={this.state.isLoading} />
+      </div>
+    );
   }
 }
 
