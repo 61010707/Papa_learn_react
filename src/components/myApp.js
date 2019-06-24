@@ -5,17 +5,20 @@ class myApp extends Component {
     super(props);
     this.state = {
       firstName: "",
-      lastName: ""
+      lastName: "",
+      isFriendly: false
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
     this.setState({
       [name]: value
     });
-    console.log(this.state.firstName);
+    type === "checkbox"
+      ? this.setState({ [name]: checked })
+      : this.setState({ [name]: value });
   }
   render() {
     return (
@@ -34,8 +37,24 @@ class myApp extends Component {
             placeholder="Last name"
             onChange={this.handleChange}
           />
+          <br />
+          <textarea name="text" value={"some value"} />
+          <br />
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              name="isFriendly"
+              checked={this.state.isFriendly}
+              onChange={this.handleChange}
+            />{" "}
+            isFriendly ??
+          </label>
+
           <h2>
-            {this.state.firstName} {this.state.lastName}
+            {this.state.firstName} {this.state.lastName}{" "}
+            {this.state.isFriendly ? "isFriendly" : null}
+            {}
           </h2>
         </form>
       </div>
