@@ -1,13 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
+import FormsContainer from "./formsContainer";
 
-class myApp extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return <form>Hello forms</form>;
-  }
+function myApp(params) {
+  return <FormsContainer />;
 }
-
 export default myApp;

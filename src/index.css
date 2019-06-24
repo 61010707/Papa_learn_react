@@ -43,5 +43,18 @@ body {
   margin: auto;
   padding: 10px;
   border-bottom: 1px solid tomato;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 5px;
+  margin: 10px;
+}
+.gender-list {
+  justify-content: center;
+  margin-left: 20px;
+  margin: 10px;
 }
