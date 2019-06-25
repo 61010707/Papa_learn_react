@@ -36,6 +36,10 @@ class MemeGenerator extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  /**
+   * Create the onChagne handler method
+   * It should update the corresponding state on every change of the input box
+   */
   handleChange(event) {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -51,12 +55,14 @@ class MemeGenerator extends Component {
             type="text"
             name="topText"
             placeholder="Top Text"
+            value={this.state.topText}
             onChange={this.handleChange}
           />
           <input
             type="text"
             name="bottomText"
             placeholder="Bottm Text"
+            value={this.state.bottomText}
             onChange={this.handleChange}
           />
         </form>
