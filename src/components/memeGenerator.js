@@ -12,11 +12,60 @@ class MemeGenerator extends Component {
     this.state = {
       topText: "",
       bottomText: "",
-      randomTmg: "http://i.imgflip.com/1bij.jpg"
+      randomTmg: "http://i.imgflip.com/1bij.jpg",
+      allMemeImgs: []
     };
   }
+  /**
+   * We'll be using an API that provides a bunch of meme images.
+   *
+   * Your task:
+   * make an API call to "https://api.imgflip.com/get_memes" and save the
+   * data that comes back (`response.data.memes`) to a new state property
+   * called `allMemeImgs`. (The data that comes back is an array)
+   */
+  componentDidMount() {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(response => response.json())
+
+      .then(response => {
+        const { memes } = response.data;
+        console.log(memes[0]);
+        this.setState({ allMemeImg: memes });
+      });
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
   render() {
-    return <h1>Meme Generrator</h1>;
+    return (
+      <div>
+        <form className="meme-form">
+          {/** * Create 2 input fields, one for the topText and one for the
+          bottomText * Remember that these will be "controlled forms", so make
+          sure to add * all the attributes you'll need for that to work */}
+          <input
+            type="text"
+            name="topText"
+            placeholder="Top Text"
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            name="bottomText"
+            placeholder="Bottm Text"
+            onChange={this.handleChange}
+          />
+        </form>
+        <hr />
+        <h2>
+          {this.state.topText} {this.state.bottomText}
+        </h2>
+      </div>
+    );
   }
 }
 
